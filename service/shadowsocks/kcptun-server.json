@@ -1,0 +1,7 @@
+{
+  "target": "0.0.0.0:2333",
+  "listen": "0.0.0.0:2334",
+  "key": "wenwen521",
+  "mode": "fast3",
+  "quiet": true
+}

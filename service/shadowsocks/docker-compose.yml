@@ -1,0 +1,12 @@
+shadowsocks:
+  image: hiwenzi/shadowsocks-server:v1.2.0
+  net: "host"
+  volumes:
+    - /root/service/shadowsocks/shadowsocks-server.json:/etc/shadowsocks-server.json
+  restart: always
+kcptun-server:
+  image: hiwenzi/kcptun-server:v1.2.0
+  net: "host"
+  volumes:
+    - /root/service/shadowsocks/kcptun-server.json:/etc/kcptun-server.json
+  restart: always

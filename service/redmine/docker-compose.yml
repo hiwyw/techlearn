@@ -1,0 +1,15 @@
+postgresql:
+        image: postgres
+        environment:
+                - POSTGRES_PASSWORD:secret
+                - POSTGRES_USER=redmine
+        volumes:
+                - /Users/wangyanwei/Docker/redmine/pg_data:/var/lib/postgresql/data
+redmine:
+        image: redmine
+        links:
+                - postgresql:postgresql
+        ports:
+                - 80:3000
+        volumes:
+                - /Users/wangyanwei/Docker/redmine/redmine_data:/usr/src/redmine/files
