@@ -1,0 +1,32 @@
+version: '2.12.2'
+
+services:
+  mysql:
+    image: jumpserver/jms_all:v2.12.2
+    ports:
+      - '80:80'
+      - '2222:2222'
+    volumes:
+      - 'core_data:/opt/jumpserver/data'
+      - 'koko_data:/opt/koko/data'
+      - 'lion_data:/opt/lion/data'
+    environment:
+      - SECRET_KEY=NWQVTSNPIFLJHFQYOMPRIAHI
+      - BOOTSTRAP_TOKEN=JZZSQYTBMWFSCFOULXLDVSFJDRTQLKKYDRUINFZEWXCMOOGHIQWLCGASKXSJUQMI
+      - LOG_LEVEL=ERROR
+      - DB_HOST=192.168.199.30
+      - DB_PORT=3306
+      - DB_USER=jumpserver
+      - DB_PASSWORD=jumpserver
+      - DB_NAME=jumpserver
+      - REDIS_HOST=192.168.199.30
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=jumpserver
+
+volumes:
+  core_data:
+    driver: local
+  koko_data:
+    driver: local
+  lion_data:
+    driver: local
