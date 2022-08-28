@@ -1,5 +1,5 @@
-VERSION=v1.0.0
-SHADOWSOCKS_VERSION=v1.8.10
+VERSION=v1.2.0
+SHADOWSOCKS_VERSION=v1.14.3
 
 docker: build-image
 	docker push hiwenzi/shadowsocks-server:${VERSION}
