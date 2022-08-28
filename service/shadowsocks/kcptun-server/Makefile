@@ -1,4 +1,4 @@
-VERSION=v1.0.0
+VERSION=v1.2.0
 
 docker: build-image
 	docker push hiwenzi/kcptun-server:${VERSION}
